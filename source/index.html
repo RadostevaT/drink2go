@@ -8,25 +8,13 @@
   </head>
   <body class="page__body">
     <header class="header">
-      <a class="header__logo" href="#">
-        <img src="" alt="Интернет-магазин «Drink2Go».">
-      </a>
-      <nav class="main-nav">
-        <ul class="main-nav__list user-list">
-          <li class="user-list__item">
-            <a class="user-list__link" href="#">Войти</a>
-          </li>
-          <li class="user-list__item">
-            <a class="user-list__link" href="#">Корзина</a>
-          </li>
-          <li class="user-list__item">
-            <button class="main-nav__toggle" type="button">
-              <span class="visually-hidden">Открыть меню</span>
-            </button>
-          </li>
-        </ul>
-        <div class="main-nav__wrapper">
+      <div class="header__wrapper">
+        <a class="header__logo" href="#">
+          <img src="/source/img/icons/logo.svg" width="32" height="36" alt="Интернет-магазин «Drink2Go».">
+        </a>
+        <nav class="main-nav">
           <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--logo"></li>
             <li class="site-list__item site-list__item--active">
               <a href="#">Главная</a>
             </li>
@@ -40,8 +28,21 @@
               <a href="#">О нас</a>
             </li>
           </ul>
-        </div>
-      </nav>
+          <ul class="main-nav__list user-list">
+            <li class="user-list__item">
+              <a class="user-list__link" href="#">Войти</a>
+            </li>
+            <li class="user-list__item">
+              <a class="user-list__link" href="#">Корзина</a>
+            </li>
+            <li class="user-list__item">
+              <button class="main-nav__toggle" type="button">
+                <span class="visually-hidden">Открыть меню</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main class="main-container">
@@ -347,7 +348,7 @@
             </div>
             <ul class="product__list">
               <li class="product__card card">
-                <a href="#"><img src="" alt=""></a>
+                <a href="#"><img src="/source/img/flat_white_img.png" width="100" height="100" alt=""></a>
                 <h3 class="card__title">Декаф Флэт Уайт</h3>
                 <p class="card__description">
                   <a href="#"

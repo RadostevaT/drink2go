@@ -23,11 +23,10 @@ body {
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
-  // background-color: #ffffff;
-  // color: #171616;
+  color: $base-black;
 }
 
-img {
-  max-width: 100%;
-  object-fit: contain;
-}
+// img {
+//   max-width: 100%;
+//   object-fit: contain;
+// }
