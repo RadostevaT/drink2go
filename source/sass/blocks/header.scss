@@ -19,3 +19,30 @@
   position: absolute;
   left: 20px;
 }
+
+.header__logo-image {
+  padding-top: 12px;
+
+  &--tablet,
+  &--desktop {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .header__wrapper {
+    min-height: 80px;
+  }
+
+  .header__logo-image {
+    padding-top: 22px;
+
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+    }
+  }
+}

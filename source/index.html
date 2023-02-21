@@ -27,7 +27,8 @@
         </svg>
       </a>
       <nav class="main-nav">
-        <ul class="main-nav__list site-list">
+        <!-- Для открытия меню модификатор opened -->
+        <ul class="main-nav__list site-list site-list--closed site-list--nojs">
           <li class="site-list__item site-list__item--logo"></li>
           <li class="site-list__item site-list__item--active">
             <a href="#">Главная</a>
@@ -48,7 +49,7 @@
               <svg width="16" height="16">
                 <use xlink:href="img/icons/stack.svg#user"></use>
               </svg>
-              <span>Войти</span>
+              <span class="user-list__text">Войти</span>
             </a>
           </li>
           <li class="user-list__item">
@@ -56,15 +57,13 @@
               <svg width="16" height="16">
                 <use xlink:href="img/icons/stack.svg#cart"></use>
               </svg>
-              <span>Корзина</span>
+              <span class="user-list__text">Корзина</span>
             </a>
           </li>
-          <li class="user-list__item">
-            <button class="main-nav__toggle" type="button">
-              <span class="visually-hidden">Открыть меню</span>
-            </button>
-          </li>
         </ul>
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
       </nav>
     </div>
   </header>
