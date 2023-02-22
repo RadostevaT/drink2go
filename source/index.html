@@ -76,8 +76,20 @@
     <section class="promo">
       <div class="promo__wrapper slider">
         <h2 class="visually-hidden">Промо-акция кофейных напитков</h2>
+        <button class="promo__button promo__button--prev" type="button">
+          <span class="visually-hidden">Предыдущий слайд</span>
+          <svg class="promo__button-image" width="11" height="20">
+            <use xlink:href="img/icons/stack.svg#left-arrow"></use>
+          </svg>
+        </button>
+        <button class="promo__button promo__button--next" type="button">
+          <span class="visually-hidden">Следующий слайд</span>
+          <svg class="promo__button-image" width="11" height="20">
+            <use xlink:href="img/icons/stack.svg#right-arrow"></use>
+          </svg>
+        </button>
         <ul class="promo__list slider__list">
-          <li class="promo__item promo__item--flat-white slider__item">
+          <li class="promo__item promo__item--flat-white slider__item slider__item--active">
             <picture>
               <source type="image/webp" media="(min-width: 1440px)"
                 srcset="img/slider/flat_white_desktop.webp 1x, img/slider/flat_white_desktop@2x.webp 2x">
@@ -95,15 +107,17 @@
             <p class="promo__badge">Новинка!</p>
             <h3 class="promo__title">Декаф Флэт Уайт</h3>
             <p class="promo__description">
-              Свежесваренный кофе без кофеина из Эфиопии с натуральным
-              фермерским молоком — то, что нужно для расслабления после
+              Свежесваренный кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным
+              фермерским молоком&nbsp;— то, что нужно для расслабления после
               тяжёлого рабочего дня
             </p>
-            <p class="promo__old-price">295₽</p>
-            <p class="promo__new-price">225₽</p>
-            <button class="promo__order" type="button">Заказать</button>
+            <div class="promo__product-info">
+              <span class="promo__old-price">295₽</span>
+              <span class="promo__new-price">225₽</span>
+              <button class="promo__order" type="button">Заказать</button>
+            </div>
           </li>
-          <li class="promo__item promo__item--lavender slider__item">
+          <li class="promo__item promo__item--lavender slider__item visually-hidden">
             <picture>
               <source type="image/webp" media="(min-width: 1440px)"
                 srcset="img/slider/lavender_desktop.webp 1x, img/slider/lavender_desktop@2x.webp 2x">
@@ -121,15 +135,17 @@
             <p class="promo__badge">Новинка!</p>
             <h3 class="promo__title">Лавандовый Латте</h3>
             <p class="promo__description">
-              Невероятное сочетание перуанской высокогорной арабики с молоком
-              ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных
+              Невероятное сочетание перуанской высокогорной арабики с&nbsp;молоком
+              ламы и&nbsp;лавандовым сиропом унесёт вас прямо на&nbsp;вершину Радужных
               гор
             </p>
-            <p class="promo__old-price">285₽</p>
-            <p class="promo__new-price">265₽</p>
-            <button class="promo__order" type="button">Заказать</button>
+            <div class="promo__product-info">
+              <span class="promo__old-price">285₽</span>
+              <span class="promo__new-price">265₽</span>
+              <button class="promo__order" type="button">Заказать</button>
+            </div>
           </li>
-          <li class="promo__item promo__item--espresso slider__item">
+          <li class="promo__item promo__item--espresso slider__item visually-hidden">
             <picture>
               <source type="image/webp" media="(min-width: 1440px)"
                 srcset="img/slider/espresso_desktop.webp 1x, img/slider/espresso_desktop@2x.webp 2x">
@@ -148,11 +164,13 @@
             <h3 class="promo__title">Тройной Эспрессо</h3>
             <p class="promo__description">
               Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной
-              эспрессо из Колумбии покажет вам, что такое настоящая бодрость
+              эспрессо из&nbsp;Колумбии покажет вам, что такое настоящая бодрость
             </p>
-            <p class="promo__old-price">395₽</p>
-            <p class="promo__new-price">375₽</p>
-            <button class="promo__order" type="button">Заказать</button>
+            <div class="promo__product-info">
+              <span class="promo__old-price">395₽</span>
+              <span class="promo__new-price">375₽</span>
+              <button class="promo__order" type="button">Заказать</button>
+            </div>
           </li>
         </ul>
         <p class="promo__toggles slider__toggles">
@@ -163,8 +181,6 @@
           <button class="slider__toggle" type="button">3</button>
         </p>
       </div>
-      <button class="promo__prev" type="button">Предыдущий слайд</button>
-      <button class="promo__next" type="button">Следующий слайд</button>
     </section>
 
     <section class="advantages">

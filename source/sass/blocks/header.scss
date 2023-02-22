@@ -14,11 +14,11 @@
 }
 
 .header__logo {
+  @include reset-link;
   height: 60px;
   z-index: 11;
   position: absolute;
   left: 20px;
-  @include reset-link;
 }
 
 .header__logo-image {
