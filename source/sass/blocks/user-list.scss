@@ -17,12 +17,44 @@
   height: 16px;
 }
 
+.user-list__link {
+  @include reset-link;
+}
+
 @media (min-width: $tablet-width) {
   .user-list {
-    right: 20px;
+    position: static;
+    margin-right: 20px;
   }
 
   .user-list__item {
     padding: 32px 22px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user-list__text {
+    display: inline;
+    padding-left: 8px;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 16px;
+    color: $base-black;
+    letter-spacing: 0.02em;
+  }
+
+  .user-list__link {
+    display: flex;
+    align-items: center;
+  }
+
+  .user-list__item {
+    padding: 32px 20px;
+    width: auto;
+  }
+
+  .user-list {
+    margin: 0;
+    gap: 20px;
   }
 }

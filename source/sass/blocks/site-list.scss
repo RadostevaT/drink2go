@@ -30,7 +30,7 @@
 
 .site-list__item a {
   @include reset-link;
-  color: $base-black;
+  color: inherit;
   padding: 20px;
   display: block;
   text-align: center;
@@ -66,12 +66,14 @@
     display: none;
     min-height: auto;
     height: auto;
-    border-bottom: none;
+    width: auto;
   }
 
   .site-list {
-    position: static;
+    position: relative;
+    left: 4px;
     flex-direction: row;
+    width: 400px;
   }
 
   .site-list--nojs .site-list {
@@ -80,5 +82,34 @@
 
   .site-list--closed .site-list__item {
     display: block;
+  }
+
+  .site-list__item {
+    border-bottom: none;
+  }
+
+  .site-list__item a {
+    padding: 32px 20px;
+    letter-spacing: 0.02em;
+  }
+
+  .site-list__item--active {
+    color: $base-primary;
+    border-bottom: solid 2px $base-primary;
+  }
+
+  .site-list__item--active a {
+    padding-bottom: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-list {
+    width: 460px;
+    left: 0;
+  }
+
+  .site-list__item:not(:first-child):not(:last-child) {
+    margin-right: 20px;
   }
 }
