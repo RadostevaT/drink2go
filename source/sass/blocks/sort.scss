@@ -1,0 +1,31 @@
+.sort {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.sort__title {
+  margin: 0;
+  font-weight: 600;
+}
+
+.sort__select {
+  width: 165px;
+  height: 32px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: $base-primary;
+  border: none;
+  background: transparent;
+}
+
+@media (min-width: $tablet-width) {
+  .sort {
+    width: 282px;
+    margin-left: auto;
+  }
+}
