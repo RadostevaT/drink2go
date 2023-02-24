@@ -4,6 +4,7 @@
   position: absolute;
   top: 0;
   right: 60px;
+  height: 60px;
   z-index: 12;
 }
 
@@ -11,23 +12,30 @@
   display: none;
 }
 
-.user-list__item {
-  padding: 22px;
-  width: 16px;
-  height: 16px;
-}
-
 .user-list__link {
   @include reset-link;
+  display: block;
+  width: 16px;
+  height: 16px;
+  padding: 22px;
+
+  &:active {
+    background-color: $base-secondary;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .user-list {
     position: static;
     margin-right: 20px;
+    height: 80px;
   }
 
   .user-list__item {
+    height: 80px;
+  }
+
+  .user-list__link {
     padding: 32px 22px;
   }
 }
@@ -44,13 +52,20 @@
   }
 
   .user-list__link {
+    width: auto;
     display: flex;
     align-items: center;
-  }
-
-  .user-list__item {
     padding: 32px 20px;
-    width: auto;
+
+    &:hover span,
+    &:focus-visible span {
+      color: $base-primary;
+    }
+
+    &:hover svg,
+    &:focus-visible svg {
+      fill: $base-primary;
+    }
   }
 
   .user-list {

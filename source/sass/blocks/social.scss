@@ -10,16 +10,27 @@
   display: block;
   width: 40px;
   height: 40px;
+  position: relative;
+  border-radius: 4px;
 
-  &--vk {
-    background: url("../../img/vk.svg") no-repeat center;
+  &:hover,
+  &:focus-visible {
+    background-color: $base-secondary;
   }
 
-  &--pinterest {
-    background: url("../../img/pinterest.svg") no-repeat center;
+  &:hover svg,
+  &:focus-visible svg {
+    fill: $base-primary;
   }
 
-  &--ok {
-    background: url("../../img/ok.svg") no-repeat center;
+  &:active {
+    background-color: $primary-opacity;
   }
+}
+
+.social__link svg {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  fill: $base-grey;
 }

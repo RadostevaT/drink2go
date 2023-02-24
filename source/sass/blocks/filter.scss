@@ -48,6 +48,17 @@
   border-radius: 50%;
   cursor: pointer;
 
+  &::before {
+    content: "";
+    position: relative;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    display: block;
+    border-radius: 50%;
+    background-color: transparent;
+  }
+
   &--min {
     top: -12px;
     left: -12px;
@@ -56,6 +67,23 @@
   &--max {
     top: -12px;
     right: -12px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    outline: 0;
+
+    &::before {
+      background-color: $primary-opacity;
+    }
+  }
+
+  &:active {
+    border-color: $base-primary;
+
+    &::before {
+      background-color: $base-primary;
+    }
   }
 }
 
@@ -77,6 +105,20 @@
   padding: 5px 10px;
   border: 2px solid $primary-lighter;
   border-radius: 4px;
+
+  &::placeholder {
+    color: $base-grey;
+  }
+
+  &:focus-visible {
+    outline: 0;
+    border-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $lightest-grey;
+    border-color: $light-grey;
+  }
 }
 
 .filter__price-controls::after {
@@ -114,6 +156,33 @@
   border-radius: 50%;
   box-sizing: border-box;
   cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    border-radius: 50%;
+  }
+
+  &:focus-visible {
+    outline: 0;
+  }
+
+  // &:focus-visible::before {
+  //   background-color: $primary-opacity;
+  // }
+}
+
+.filter__milk-input:enabled:not(:checked) ~ .filter__milk-mark:hover::before {
+  background-color: $primary-opacity;
+}
+
+.filter__milk-input:enabled:not(:checked) ~ .filter__milk-label:hover ~ .filter__milk-mark::before {
+  background-color: $primary-opacity;
 }
 
 .filter__milk-label {
@@ -122,14 +191,7 @@
 }
 
 .filter__milk-input:checked + .filter__milk-mark::before {
-  content: "";
-  position: absolute;
-  left: 2px;
-  top: 2px;
-  width: 16px;
-  height: 16px;
   background-color: $base-primary;
-  border-radius: 50%;
 }
 
 .filter__milk-input:disabled ~ .filter__milk-mark {
@@ -221,9 +283,30 @@
   background-color: $base-primary;
   color: $base-white;
 
+  &:hover,
+  &:focus-visible {
+    background-color: $primary-lighter;
+    color: $base-white;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+    color: $base-white;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+    color: $base-white;
+    cursor: default;
+  }
+
   &--reset {
     background-color: $base-white;
     color: $base-primary;
+
+    &:disabled {
+      background-color: $light-grey;
+    }
   }
 }
 

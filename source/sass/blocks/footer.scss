@@ -64,6 +64,15 @@
   line-height: 16px;
   font-weight: 500;
   letter-spacing: 0.02em;
+
+  &:hover,
+  &:focus-visible {
+    color: $primary-lighter;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
 }
 
 .footer__contacts-address {
@@ -101,6 +110,15 @@
     width: 13px;
     height: 16px;
   }
+
+  &:hover,
+  &:focus-visible {
+    color: $primary-lighter;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
 }
 
 .footer__copyright {
@@ -120,15 +138,34 @@
   color: $base-grey;
 }
 
+.footer__copyright-logo {
+  margin-left: 4px;
+  fill: $base-grey;
+}
+
 .footer__copyright-link {
   @include reset-link;
   display: flex;
   flex-direction: row;
   align-items: center;
-}
 
-.footer__copyright-logo {
-  margin-left: 4px;
+  &:hover .footer__copyright-text,
+  &:focus-visible .footer__copyright-text {
+    color: $primary-lighter;
+  }
+
+  &:hover .footer__copyright-logo,
+  &:focus-visible .footer__copyright-logo {
+    fill: $primary-lighter;
+  }
+
+  &:active .footer__copyright-text {
+    color: $primary-darker;
+  }
+
+  &:active .footer__copyright-logo {
+    fill: $primary-darker;
+  }
 }
 
 @media (min-width: $tablet-width) {

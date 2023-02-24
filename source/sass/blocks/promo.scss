@@ -95,6 +95,20 @@
   border-radius: 4px;
   padding: 8px 20px;
   cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+    cursor: default;
+  }
 }
 
 .promo__button {

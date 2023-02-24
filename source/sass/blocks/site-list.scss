@@ -30,6 +30,18 @@
   padding: 20px;
   display: block;
   text-align: center;
+
+  &:hover {
+    color: $base-primary;
+  }
+
+  &:active {
+    background-color: $base-secondary;
+  }
+
+  &:focus-visible {
+    color: $base-primary;
+  }
 }
 
 .site-list__item--logo {
@@ -107,5 +119,9 @@
 
   .site-list__item:not(:first-child):not(:last-child) {
     margin-right: 20px;
+  }
+
+  .site-list__item a:active {
+    color: $base-primary;
   }
 }

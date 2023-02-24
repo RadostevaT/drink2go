@@ -286,28 +286,28 @@
                   <label class="filter__milk-radio">
                     <input class="visually-hidden filter__milk-input" type="radio" name="milk" value="no-matter"
                       checked="checked">
-                    <span class="filter__milk-mark"></span>
+                    <span class="filter__milk-mark" tabindex="0"></span>
                     <span class="filter__milk-label">Неважно</span>
                   </label>
                 </li>
                 <li class="filter__milk-item">
                   <label class="filter__milk-radio">
                     <input class="visually-hidden filter__milk-input" type="radio" name="milk" value="animal-only">
-                    <span class="filter__milk-mark"></span>
+                    <span class="filter__milk-mark" tabindex="0"></span>
                     <span class="filter__milk-label">Только животное</span>
                   </label>
                 </li>
                 <li class="filter__milk-item">
                   <label class="filter__milk-radio">
                     <input class="visually-hidden filter__milk-input" type="radio" name="milk" value="plant-only">
-                    <span class="filter__milk-mark"></span>
+                    <span class="filter__milk-mark" tabindex="0"></span>
                     <span class="filter__milk-label">Только растительное</span>
                   </label>
                 </li>
                 <li class="filter__milk-item">
                   <label class="filter__milk-radio">
                     <input class="visually-hidden filter__milk-input" type="radio" name="milk" value="no-milk" disabled>
-                    <span class="filter__milk-mark"></span>
+                    <span class="filter__milk-mark" tabindex="0"></span>
                     <span class="filter__milk-label">Без молока</span>
                   </label>
                 </li>
@@ -319,35 +319,35 @@
                 <li class="filter__country-item">
                   <label class="filter__country-checkbox">
                     <input class="visually-hidden filter__country-checkbox-input" type="checkbox" name="Brazil" checked>
-                    <span class="filter__country-checkbox-mark"></span>
+                    <span class="filter__country-checkbox-mark" tabindex="0"></span>
                     <span class="filter__country-checkbox-label">Бразилия</span>
                   </label>
                 </li>
                 <li class="filter__country-item">
                   <label class="filter__country-checkbox">
                     <input class="visually-hidden filter__country-checkbox-input" type="checkbox" name="Ethiopia">
-                    <span class="filter__country-checkbox-mark"></span>
+                    <span class="filter__country-checkbox-mark" tabindex="0"></span>
                     <span class="filter__country-checkbox-label">Эфиопия</span>
                   </label>
                 </li>
                 <li class="filter__country-item">
                   <label class="filter__country-checkbox">
                     <input class="visually-hidden filter__country-checkbox-input" type="checkbox" name="Colombia">
-                    <span class="filter__country-checkbox-mark"></span>
+                    <span class="filter__country-checkbox-mark" tabindex="0"></span>
                     <span class="filter__country-checkbox-label">Колумбия</span>
                   </label>
                 </li>
                 <li class="filter__country-item">
                   <label class="filter__country-checkbox">
                     <input class="visually-hidden filter__country-checkbox-input" type="checkbox" name="Costa-Rica">
-                    <span class="filter__country-checkbox-mark"></span>
+                    <span class="filter__country-checkbox-mark" tabindex="0"></span>
                     <span class="filter__country-checkbox-label">Коста-Рика</span>
                   </label>
                 </li>
                 <li class="filter__country-item">
                   <label class="filter__country-checkbox">
                     <input class="visually-hidden filter__country-checkbox-input" type="checkbox" name="Peru" disabled>
-                    <span class="filter__country-checkbox-mark"></span>
+                    <span class="filter__country-checkbox-mark" tabindex="0"></span>
                     <span class="filter__country-checkbox-label">Перу</span>
                   </label>
                 </li>
@@ -500,25 +500,23 @@
                 </div>
               </li>
             </ul>
-            <div class="product__pagination pagination">
-              <a class="pagination__button pagination__button--left" href="#">
+            <nav class="product__pagination pagination">
+              <button class="pagination__button pagination__button--arrow" type="button">
                 <span class="pagination__button-text">Назад</span>
-              </a>
-              <ul class="pagination__list">
-                <li class="pagination__item">
-                  <a class="pagination__link" href="#">1</a>
-                </li>
-                <li class="pagination__item">
-                  <a class="pagination__link pagination__link--current" href="#">2</a>
-                </li>
-                <li class="pagination__item">
-                  <a class="pagination__link" href="#">3</a>
-                </li>
-              </ul>
-              <a class="pagination__button pagination__button--right" href="#">
+                <svg width="6" height="10">
+                  <use xlink:href="img/icons/stack.svg#pagination-left"></use>
+                </svg>
+              </button>
+              <button class="pagination__button" type="button">1</button>
+              <button class="pagination__button pagination__button--current" type="button">2</button>
+              <button class="pagination__button" type="button">3</button>
+              <button class="pagination__button pagination__button--arrow" type="button">
                 <span class="pagination__button-text">Вперёд</span>
-              </a>
-            </div>
+                <svg width="6" height="10">
+                  <use xlink:href="img/icons/stack.svg#pagination-right"></use>
+                </svg>
+              </button>
+            </nav>
           </div>
         </div>
       </div>
@@ -542,18 +540,27 @@
         <p class="footer__description">Интернет-магазин кофейных напитков</p>
         <ul class="footer__social social">
           <li class="social__item">
-            <a class="social__link social__link--vk" href="#">
+            <a class="social__link" href="#">
               <span class="visually-hidden">VK</span>
+              <svg width="20" height="20">
+                <use xlink:href="img/icons/stack.svg#vk"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--pinterest" href="#">
+            <a class="social__link" href="#">
               <span class="visually-hidden">Pinterest</span>
+              <svg width="20" height="20">
+                <use xlink:href="img/icons/stack.svg#pinterest"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--ok" href="#">
+            <a class="social__link" href="#">
               <span class="visually-hidden">OK</span>
+              <svg width="20" height="20">
+                <use xlink:href="img/icons/stack.svg#ok"></use>
+              </svg>
             </a>
           </li>
         </ul>
