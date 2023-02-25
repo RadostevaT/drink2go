@@ -281,74 +281,67 @@
             </div>
             <div class="filter__group filter__milk">
               <p class="filter__legend">Наличие молока</p>
+              <!-- Для disabled добавить модификатор --disabled -->
               <ul class="filter__milk-list">
                 <li class="filter__milk-item">
                   <label class="filter__milk-radio">
-                    <input class="visually-hidden filter__milk-input" type="radio" name="milk" value="no-matter"
+                    <input class="filter__milk-input" type="radio" name="milk" value="no-matter"
                       checked="checked">
-                    <span class="filter__milk-mark" tabindex="0"></span>
-                    <span class="filter__milk-label">Неважно</span>
+                      Неважно
                   </label>
                 </li>
                 <li class="filter__milk-item">
                   <label class="filter__milk-radio">
-                    <input class="visually-hidden filter__milk-input" type="radio" name="milk" value="animal-only">
-                    <span class="filter__milk-mark" tabindex="0"></span>
-                    <span class="filter__milk-label">Только животное</span>
+                    <input class="filter__milk-input" type="radio" name="milk" value="animal-only">
+                    Только животное
                   </label>
                 </li>
                 <li class="filter__milk-item">
                   <label class="filter__milk-radio">
-                    <input class="visually-hidden filter__milk-input" type="radio" name="milk" value="plant-only">
-                    <span class="filter__milk-mark" tabindex="0"></span>
-                    <span class="filter__milk-label">Только растительное</span>
+                    <input class="filter__milk-input" type="radio" name="milk" value="plant-only">
+                    Только растительное
                   </label>
                 </li>
                 <li class="filter__milk-item">
-                  <label class="filter__milk-radio">
-                    <input class="visually-hidden filter__milk-input" type="radio" name="milk" value="no-milk" disabled>
-                    <span class="filter__milk-mark" tabindex="0"></span>
-                    <span class="filter__milk-label">Без молока</span>
+                  <label class="filter__milk-radio filter__milk-radio--disabled">
+                    <input class="filter__milk-input" type="radio" name="milk" value="no-milk" disabled>
+                    Без молока
                   </label>
                 </li>
               </ul>
             </div>
             <div class="filter__group filter__country">
               <p class="filter__legend">Страна произрастания</p>
+              <!-- Для disabled добавить модификатор --disabled -->
               <ul class="filter__country-list">
                 <li class="filter__country-item">
                   <label class="filter__country-checkbox">
-                    <input class="visually-hidden filter__country-checkbox-input" type="checkbox" name="Brazil" checked>
-                    <span class="filter__country-checkbox-mark" tabindex="0"></span>
-                    <span class="filter__country-checkbox-label">Бразилия</span>
+                    <input class="filter__country-checkbox-input" type="checkbox" name="Brazil" checked>
+                    Бразилия
                   </label>
                 </li>
                 <li class="filter__country-item">
                   <label class="filter__country-checkbox">
-                    <input class="visually-hidden filter__country-checkbox-input" type="checkbox" name="Ethiopia">
-                    <span class="filter__country-checkbox-mark" tabindex="0"></span>
-                    <span class="filter__country-checkbox-label">Эфиопия</span>
+                    <input class="filter__country-checkbox-input" type="checkbox" name="Ethiopia">
+                    Эфиопия
                   </label>
                 </li>
                 <li class="filter__country-item">
                   <label class="filter__country-checkbox">
-                    <input class="visually-hidden filter__country-checkbox-input" type="checkbox" name="Colombia">
-                    <span class="filter__country-checkbox-mark" tabindex="0"></span>
-                    <span class="filter__country-checkbox-label">Колумбия</span>
+                    <input class="filter__country-checkbox-input" type="checkbox" name="Colombia">
+                    Колумбия
                   </label>
                 </li>
                 <li class="filter__country-item">
                   <label class="filter__country-checkbox">
-                    <input class="visually-hidden filter__country-checkbox-input" type="checkbox" name="Costa-Rica">
-                    <span class="filter__country-checkbox-mark" tabindex="0"></span>
-                    <span class="filter__country-checkbox-label">Коста-Рика</span>
+                    <input class="filter__country-checkbox-input" type="checkbox" name="Costa-Rica">
+                    Коста-Рика
                   </label>
                 </li>
                 <li class="filter__country-item">
-                  <label class="filter__country-checkbox">
-                    <input class="visually-hidden filter__country-checkbox-input" type="checkbox" name="Peru" disabled>
-                    <span class="filter__country-checkbox-mark" tabindex="0"></span>
-                    <span class="filter__country-checkbox-label">Перу</span>
+                  <label class="filter__country-checkbox filter__country-checkbox--disabled">
+                    <input class="filter__country-checkbox-input" type="checkbox" name="Peru" disabled>
+                    Перу
                   </label>
                 </li>
               </ul>

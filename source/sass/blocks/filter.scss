@@ -142,66 +142,64 @@
 }
 
 .filter__milk-radio {
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  cursor: pointer;
+
+  &--disabled {
+    color: $light-grey;
+    cursor: default;
+  }
+
+  &:hover .filter__milk-input:not(:checked):enabled::before {
+    background-color: $primary-opacity;
+    transform: scale(1);
+  }
 }
 
-.filter__milk-mark {
-  position: absolute;
-  top: -3px;
-  left: 0;
+.filter__milk-input {
+  appearance: none;
+  margin: 0;
   width: 24px;
   height: 24px;
   background-color: transparent;
   border: solid 2px $base-primary;
   border-radius: 50%;
-  box-sizing: border-box;
-  cursor: pointer;
+  position: relative;
 
   &::before {
     content: "";
     position: absolute;
-    left: 2px;
     top: 2px;
+    left: 2px;
     width: 16px;
     height: 16px;
-    background-color: transparent;
     border-radius: 50%;
+    transform: scale(0);
+    background-color: $base-primary;
+  }
+
+  &:checked::before {
+    transform: scale(1);
+  }
+
+  &:disabled {
+    border-color: $light-grey;
+
+    &:checked::before {
+      background-color: $light-grey;
+    }
   }
 
   &:focus-visible {
     outline: 0;
+
+    &:not(:checked):enabled::before {
+      background-color: $primary-opacity;
+      transform: scale(1);
+    }
   }
-
-  // &:focus-visible::before {
-  //   background-color: $primary-opacity;
-  // }
-}
-
-.filter__milk-input:enabled:not(:checked) ~ .filter__milk-mark:hover::before {
-  background-color: $primary-opacity;
-}
-
-.filter__milk-input:enabled:not(:checked) ~ .filter__milk-label:hover ~ .filter__milk-mark::before {
-  background-color: $primary-opacity;
-}
-
-.filter__milk-label {
-  padding-left: 34px;
-  cursor: pointer;
-}
-
-.filter__milk-input:checked + .filter__milk-mark::before {
-  background-color: $base-primary;
-}
-
-.filter__milk-input:disabled ~ .filter__milk-mark {
-  border-color: $light-grey;
-  cursor: default;
-}
-
-.filter__milk-input:disabled ~ .filter__milk-label {
-  color: $base-grey;
-  cursor: default;
 }
 
 .filter__country-item:not(:last-child) {
@@ -209,58 +207,77 @@
 }
 
 .filter__country-checkbox {
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  cursor: pointer;
+
+  &--disabled {
+    color: $base-grey;
+    cursor: default;
+  }
+
+  &:hover .filter__country-checkbox-input:not(:checked):enabled {
+    background-color: $primary-opacity;
+    border-color: $base-primary;
+  }
 }
 
-.filter__country-checkbox-mark {
-  position: absolute;
-  top: -2px;
-  left: 0;
+.filter__country-checkbox-input {
+  appearance: none;
+  margin: 0;
   width: 42px;
   height: 24px;
   background-color: $base-grey;
+  border: solid 2px $base-grey;
   border-radius: 12px;
-  transition: 0.2s;
   cursor: pointer;
+  position: relative;
 
   &::before {
     content: "";
     position: absolute;
-    top: 2px;
-    left: 2px;
+    top: 0;
+    left: 0;
     width: 20px;
     height: 20px;
+    transform: scale(1);
     background-color: $base-white;
     border-radius: 50%;
     transition: 0.2s;
   }
-}
 
-.filter__country-checkbox-input:checked ~ .filter__country-checkbox-mark::before {
-  transform: translateX(18px);
-}
+  &:checked {
+    background-color: $base-primary;
+    border-color: $base-primary;
+  }
 
-.filter__country-checkbox-input:checked ~ .filter__country-checkbox-mark {
-  background-color: $base-primary;
-}
+  &:checked::before {
+    transform: scale(1) translateX(18px);
+  }
 
-.filter__country-checkbox-label {
-  padding-left: 54px;
-  cursor: pointer;
-}
+  &:disabled {
+    background-color: $light-grey;
+    border-color: $light-grey;
+    cursor: default;
 
-.filter__country-checkbox-input:disabled ~ .filter__country-checkbox-mark {
-  background-color: $light-grey;
-  cursor: default;
-}
+    &::before {
+      background-color: $lightest-grey;
+    }
 
-.filter__country-checkbox-input:disabled ~ .filter__country-checkbox-mark::before {
-  background-color: $lightest-grey;
-}
+    &:checked::before {
+      background-color: $base-grey;
+    }
+  }
 
-.filter__country-checkbox-input:disabled ~ .filter__country-checkbox-label {
-  color: $base-grey;
-  cursor: default;
+  &:focus-visible {
+    outline: 0;
+
+    &:not(:checked):enabled {
+      background-color: $primary-opacity;
+      border-color: $base-primary;
+    }
+  }
 }
 
 .filter__buttons {
