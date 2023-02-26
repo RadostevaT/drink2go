@@ -22,6 +22,10 @@
   color: $base-primary;
   border: none;
   background: transparent;
+
+  & option {
+    color: $base-black;
+  }
 }
 
 @media (min-width: $tablet-width) {
