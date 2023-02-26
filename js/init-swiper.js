@@ -1,0 +1,1 @@
+const initSwiper=()=>new Swiper(".swiper",{direction:"horizontal",loop:!0,pagination:{el:".swiper-pagination",clickable:!0},navigation:{nextEl:".promo__button--next",prevEl:".promo__button--prev"}});export{initSwiper};
