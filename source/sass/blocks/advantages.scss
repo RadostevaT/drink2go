@@ -54,6 +54,7 @@
 @media (min-width: $tablet-width) {
   .advantages__wrapper {
     max-width: $tablet-wrapper;
+    padding-bottom: 100px;
   }
 
   .advantages__subtitle {
@@ -94,6 +95,7 @@
 @media (min-width: $desktop-width) {
   .advantages__wrapper {
     max-width: $desktop-wrapper;
+    padding: 100px 0 120px;
   }
 
   .advantages__subtitle {

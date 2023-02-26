@@ -15,11 +15,11 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
-  margin-bottom: 21px;
+  margin-bottom: 23px;
 }
 
 .filter__price .filter__legend {
-  margin-bottom: 31px;
+  margin-bottom: 32px;
 }
 
 .filter__price-scale {
@@ -60,13 +60,13 @@
   }
 
   &--min {
-    top: -12px;
+    top: -10px;
     left: -12px;
   }
 
   &--max {
-    top: -12px;
-    right: -12px;
+    top: -10px;
+    right: -8px;
   }
 
   &:hover,
@@ -167,6 +167,7 @@
   border: solid 2px $base-primary;
   border-radius: 50%;
   position: relative;
+  transform: translateY(-1px);
 
   &::before {
     content: "";
@@ -202,6 +203,10 @@
   }
 }
 
+.filter__country .filter__legend {
+  margin-bottom: 21px;
+}
+
 .filter__country-item:not(:last-child) {
   margin-bottom: 20px;
 }
@@ -209,7 +214,7 @@
 .filter__country-checkbox {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 12px;
   cursor: pointer;
 
   &--disabled {
@@ -281,7 +286,7 @@
 }
 
 .filter__buttons {
-  margin-top: 11px;
+  margin-top: 9px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -318,6 +323,7 @@
   }
 
   &--reset {
+    font-size: 14px;
     background-color: $base-white;
     color: $base-primary;
 
@@ -332,29 +338,43 @@
     width: $tablet-wrapper;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 41px;
   }
 
   .filter__group {
     margin-bottom: 0;
   }
 
+  .filter__price .filter__legend {
+    margin-bottom: 29px;
+  }
+
+  .filter__inner {
+    transform: translateX(8px);
+  }
+
+  .filter__price-toggle--max {
+    right: 0;
+  }
+
   .filter__price {
-    width: 220px;
+    width: 218px;
   }
 
   .filter__milk {
-    width: 210px;
+    width: 218px;
   }
 
   .filter__country {
-    width: 197px;
+    width: 231px;
   }
 
   .filter__buttons {
     flex-direction: row;
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 37px;
     gap: 29px;
+    transform: translateX(-24px);
   }
 
   .filter__price-bar {
@@ -370,7 +390,7 @@
   }
 
   .filter__legend {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   .filter__button {
@@ -385,5 +405,45 @@
     width: 318px;
     flex-direction: column;
     justify-content: flex-start;
+  }
+
+  .filter__milk,
+  .filter__country,
+  .filter__price {
+    width: 100%;
+  }
+
+  .filter__inner {
+    transform: none;
+  }
+
+  .filter__price-bar {
+    width: 287px;
+  }
+
+  .filter__price-input {
+    width: 134px;
+  }
+
+  .filter__price-controls::after {
+    right: 155px;
+  }
+
+  .filter__group {
+    margin-bottom: 30px;
+  }
+
+  .filter__legend {
+    margin-bottom: 21px;
+  }
+
+  .filter__country .filter__legend {
+    margin-bottom: 18px;
+  }
+
+  .filter__buttons {
+    margin-top: 10px;
+    transform: none;
+    gap: 22px;
   }
 }

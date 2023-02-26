@@ -3,7 +3,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .sort__title {
@@ -12,7 +12,7 @@
 }
 
 .sort__select {
-  width: 165px;
+  width: 156px;
   height: 32px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
@@ -27,5 +27,12 @@
   .sort {
     width: 282px;
     margin-left: auto;
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .sort {
+    margin-bottom: 22px;
   }
 }

@@ -21,13 +21,14 @@
   font-size: 24px;
   line-height: 36px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   text-align: center;
 }
 
 @media (min-width: $tablet-width) {
   .catalog__wrapper {
     max-width: $tablet-wrapper;
+    padding: 80px 0 90px;
   }
 
   .catalog__subtitle {
@@ -39,6 +40,7 @@
 @media (min-width: $desktop-width) {
   .catalog__wrapper {
     max-width: $desktop-wrapper;
+    padding: 100px 0 120px;
   }
 
   .catalog__inner {

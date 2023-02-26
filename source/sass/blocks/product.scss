@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 20px 20px 18px;
+  padding: 40px 20px 20px 20px;
   background-color: $base-white;
   border-radius: 4px;
 
@@ -20,7 +20,7 @@
 }
 
 .product__image {
-  margin-bottom: 24px;
+  margin-bottom: 17px;
 }
 
 .product__card-title {
@@ -97,6 +97,8 @@
 @media (min-width: $tablet-width) {
   .product__list {
     grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 70px;
   }
 
   .product__card {
@@ -104,13 +106,13 @@
   }
 
   .product__image {
-    margin-bottom: 30px;
+    margin-bottom: 24px;
   }
 
   .product__card-title {
     font-size: 24px;
     line-height: 36px;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
   }
 
   .product__card-description {
@@ -121,5 +123,6 @@
 @media (min-width: $desktop-width) {
   .product__list {
     grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 61px;
   }
 }

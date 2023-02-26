@@ -38,7 +38,7 @@
   letter-spacing: 0.02em;
   color: $base-primary;
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .footer__nav,
@@ -46,7 +46,7 @@
 .footer__contacts {
   width: $mobile-wrapper;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 20px 0 26px;
 }
 
 .footer__list {
@@ -75,19 +75,27 @@
   }
 }
 
+.footer__contacts {
+  padding-bottom: 19px;
+}
+
+.footer__contacts .footer__title {
+  margin-bottom: 19px;
+}
+
 .footer__contacts-address {
   margin: 0;
   padding-left: 19px;
   font-size: 14px;
   line-height: 20px;
   position: relative;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 
   &::before {
     content: "";
     background: url("../../img/location.svg") no-repeat center;
     position: absolute;
-    top: 4px;
+    top: 2px;
     left: 0;
     width: 13px;
     height: 16px;
@@ -105,7 +113,7 @@
     content: "";
     background: url("../../img/phone.svg") no-repeat center;
     position: absolute;
-    top: 2px;
+    top: 1px;
     left: 0;
     width: 13px;
     height: 16px;
@@ -184,6 +192,8 @@
   .footer__main-info {
     width: $tablet-wrapper;
     margin-bottom: 12px;
+    padding: 40px 0 30px;
+    margin: 0 auto;
   }
 
   .footer__inner {
@@ -211,7 +221,7 @@
 
   .footer__copyright {
     width: $tablet-wrapper;
-    padding: 30px 0 40px;
+    padding: 34px 0 40px;
   }
 }
 
@@ -247,16 +257,25 @@
   .footer__inner {
     width: auto;
     margin: 0;
+    gap: 30px;
+    padding-top: 8px;
   }
 
   .footer__copyright {
     width: 100%;
-    padding: 20px 0 40px;
+    padding: 24px 0 40px;
   }
 
   .footer__nav,
-  .footer__media,
+  .footer__media {
+    width: 318px;
+  }
+
   .footer__contacts {
-    width: 317px;
+    width: 316px;
+  }
+
+  .footer__contacts .footer__title {
+    margin-bottom: 21px;
   }
 }

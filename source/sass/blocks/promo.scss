@@ -160,13 +160,13 @@
     max-width: 608px;
     min-height: 640px;
     padding: 60px 0 308px;
-    margin-bottom: 188px;
+    margin-bottom: 198px;
     position: relative;
   }
 
   .promo__item picture {
     position: absolute;
-    bottom: -188px;
+    bottom: -198px;
   }
 
   .promo__title {
@@ -194,19 +194,22 @@
 
   .promo__item {
     max-width: 1255px;
-    padding: 30px 0 84px;
+    padding: 30px 0 74px;
     margin-bottom: 0;
     flex-direction: row;
     justify-content: space-between;
+    transform: translateX(12px);
   }
 
   .promo__info {
     width: 625px;
     align-items: start;
+    margin-top: -18px;
   }
 
   .promo__description {
     text-align: left;
+    margin-bottom: 40px;
   }
 
   .promo__button {
@@ -214,6 +217,6 @@
   }
 
   .promo__pagination {
-    padding-bottom: 60px;
+    padding-bottom: 53px;
   }
 }

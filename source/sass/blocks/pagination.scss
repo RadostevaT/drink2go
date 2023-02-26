@@ -22,6 +22,7 @@
   font-size: 16px;
   line-height: 24px;
   color: $base-primary;
+  padding: 0;
 
   & svg {
     fill: $base-primary;
@@ -88,6 +89,7 @@
 
   .pagination__button--arrow {
     width: auto;
+
   }
 
   .pagination__button-text {
