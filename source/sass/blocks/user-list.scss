@@ -1,5 +1,6 @@
 .user-list {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   position: absolute;
   top: 0;
@@ -55,8 +56,13 @@
   .user-list__link {
     width: auto;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     padding: 32px 20px;
+
+    &:focus-visible {
+      outline: 0;
+    }
 
     &:hover span,
     &:focus-visible span {

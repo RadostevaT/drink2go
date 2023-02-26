@@ -12,13 +12,17 @@
   <link rel="preload" href="fonts/Montserrat-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Montserrat-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
   <header class="header">
     <div class="header__wrapper">
       <nav class="main-nav">
-        <a class="header__logo" href="#">
+        <a class="header__logo" href="#" aria-label="Логотип магазина Drink2Go.">
           <svg class="header__logo-image header__logo-image--desktop" width="170" height="36">
             <use xlink:href="img/icons/stack.svg#logo-full"></use>
           </svg>
@@ -76,29 +80,6 @@
       Интернет-магазин кофейных напитков «Drink2Go».
     </h1>
     <section class="promo">
-      <!-- <div class="promo__wrapper slider">
-        <h2 class="visually-hidden">Промо-акция кофейных напитков</h2>
-        <button class="promo__button promo__button--prev" type="button">
-          <span class="visually-hidden">Предыдущий слайд</span>
-          <svg class="promo__button-image" width="11" height="20">
-            <use xlink:href="img/icons/stack.svg#left-arrow"></use>
-          </svg>
-        </button>
-        <button class="promo__button promo__button--next" type="button">
-          <span class="visually-hidden">Следующий слайд</span>
-          <svg class="promo__button-image" width="11" height="20">
-            <use xlink:href="img/icons/stack.svg#right-arrow"></use>
-          </svg>
-        </button>
-        <p class="promo__toggles slider__toggles visually-hidden">
-          <button class="slider__toggle slider__toggle--current" type="button">
-            1
-          </button>
-          <button class="slider__toggle" type="button">2</button>
-          <button class="slider__toggle" type="button">3</button>
-        </p>
-      </div> -->
-
       <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide swiper__slide">
@@ -256,7 +237,7 @@
             </div>
           </li>
           <li class="advantages__item">
-            <svg class="advantages__image advantages__image--mobile" width="52" height="56">
+            <svg class="advantages__image" width="52" height="56">
               <use xlink:href="img/icons/stack.svg#eco"></use>
             </svg>
             <div class="advantages__item-wrapper">
@@ -303,7 +284,7 @@
             </div>
             <div class="filter__group filter__milk">
               <p class="filter__legend">Наличие молока</p>
-              <!-- Для disabled добавить модификатор --disabled -->
+              <!-- Для disabled дополнительно добавить модификатор disabled на label -->
               <ul class="filter__milk-list">
                 <li class="filter__milk-item">
                   <label class="filter__milk-radio">
@@ -333,7 +314,7 @@
             </div>
             <div class="filter__group filter__country">
               <p class="filter__legend">Страна произрастания</p>
-              <!-- Для disabled добавить модификатор --disabled -->
+              <!-- Для disabled дополнительно добавить модификатор disabled на label -->
               <ul class="filter__country-list">
                 <li class="filter__country-item">
                   <label class="filter__country-checkbox">
@@ -522,7 +503,7 @@
                 </svg>
               </button>
               <button class="pagination__button" type="button">1</button>
-              <button class="pagination__button pagination__button--current" type="button">2</button>
+              <button class="pagination__button pagination__button--current" type="button" tabindex="-1">2</button>
               <button class="pagination__button" type="button">3</button>
               <button class="pagination__button pagination__button--arrow" type="button">
                 <span class="pagination__button-text">Вперёд</span>
@@ -547,7 +528,7 @@
         <source media="(min-width: 1440px)" srcset="img/map/map-desktop.jpg 1x, img/map/map-desktop@2x.jpg 2x">
         <source media="(min-width: 768px)" srcset="img/map/map-tablet.jpg 1x, img/map/map-tablet@2x.jpg 2x">
         <img class="map__image" loading="lazy" src="img/map/map-mobile.jpg" srcset="img/map/map-mobile@2x.jpg 2x"
-          alt="Декаф Флэт Уайт.">
+          alt="Карта с меткой расположения магазина.">
       </picture>
     </section>
   </main>

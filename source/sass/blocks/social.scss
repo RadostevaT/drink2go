@@ -2,6 +2,7 @@
   @include reset-list;
   width: 160px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
 }
@@ -16,6 +17,7 @@
   &:hover,
   &:focus-visible {
     background-color: $base-secondary;
+    outline: 0;
   }
 
   &:hover svg,

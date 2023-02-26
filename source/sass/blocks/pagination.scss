@@ -1,5 +1,6 @@
 .pagination {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -39,6 +40,7 @@
   &:focus-visible:enabled:not(.pagination__button--current) {
     color: $base-white;
     background-color: $primary-lighter;
+    outline: 0;
 
     &.pagination__button-text {
       color: $base-white;
@@ -89,7 +91,6 @@
 
   .pagination__button--arrow {
     width: auto;
-
   }
 
   .pagination__button-text {

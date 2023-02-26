@@ -4,6 +4,7 @@
   top: 0;
   left: 0;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   z-index: 10;
@@ -41,6 +42,7 @@
 
   &:focus-visible {
     color: $base-primary;
+    outline: 0;
   }
 }
 
@@ -94,6 +96,7 @@
 
   .site-list__item {
     border-bottom: none;
+    width: auto;
   }
 
   .site-list__item a {

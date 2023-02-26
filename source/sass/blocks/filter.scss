@@ -1,7 +1,7 @@
 .filter {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
+  flex-direction: column;
   width: $mobile-wrapper;
   margin-bottom: 35px;
 }
@@ -89,6 +89,7 @@
 
 .filter__price-controls {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   position: relative;
@@ -143,6 +144,7 @@
 
 .filter__milk-radio {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   gap: 10px;
   cursor: pointer;
@@ -213,6 +215,7 @@
 
 .filter__country-checkbox {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   gap: 12px;
   cursor: pointer;
@@ -288,6 +291,7 @@
 .filter__buttons {
   margin-top: 9px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   gap: 24.5px;
@@ -307,6 +311,7 @@
 
   &:hover,
   &:focus-visible {
+    outline: 0;
     background-color: $primary-lighter;
     color: $base-white;
   }
@@ -442,6 +447,7 @@
   }
 
   .filter__buttons {
+    width: 318px;
     margin-top: 10px;
     transform: none;
     gap: 22px;
