@@ -1,5 +1,5 @@
-import { initMenu } from "./initMenu.js";
-import { initMap } from "./initMap.js";
+import { initMenu } from "./init-menu.js";
+import { initMap } from "./init-map.js";
 
 initMenu();
 initMap();
