@@ -1,0 +1,31 @@
+.swiper {
+  width: 100%;
+  min-height: 656px;
+  position: relative;
+}
+
+.swiper__slide {
+  width: 100%;
+}
+
+.swiper-pagination {
+  display: none;
+}
+
+.swiper-pagination-bullet {
+  width: 62px;
+  height: 4px;
+  background-color: $base-white;
+  opacity: 1;
+  border-radius: 0;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $base-primary;
+}
+
+@media (min-width: $desktop-width) {
+  .swiper-pagination {
+    display: block;
+  }
+}

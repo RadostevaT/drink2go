@@ -5,8 +5,9 @@
   <meta charset="UTF-8">
   <title>Drink2Go</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="preload" href="fonts/Montserrat-Regular.woff" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Montserrat-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
@@ -75,7 +76,7 @@
       Интернет-магазин кофейных напитков «Drink2Go».
     </h1>
     <section class="promo">
-      <div class="promo__wrapper slider">
+      <!-- <div class="promo__wrapper slider">
         <h2 class="visually-hidden">Промо-акция кофейных напитков</h2>
         <button class="promo__button promo__button--prev" type="button">
           <span class="visually-hidden">Предыдущий слайд</span>
@@ -89,103 +90,6 @@
             <use xlink:href="img/icons/stack.svg#right-arrow"></use>
           </svg>
         </button>
-        <ul class="promo__list slider__list">
-          <li class="promo__item promo__item--flat-white slider__item slider__item--active">
-            <div class="promo__item-wrapper">
-              <picture>
-                <source type="image/webp" media="(min-width: 1440px)"
-                  srcset="img/slider/flat_white_desktop.webp 1x, img/slider/flat_white_desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)"
-                  srcset="img/slider/flat_white_tablet.webp 1x, img/slider/flat_white_tablet@2x.webp 2x">
-                <source type="image/webp"
-                  srcset="img/slider/flat_white_mobile.webp 1x, img/slider/flat_white_mobile@2x.webp 2x">
-                <source media="(min-width: 1440px)"
-                  srcset="img/slider/flat_white_desktop.png 1x, img/slider/flat_white_desktop@2x.png 2x">
-                <source media="(min-width: 768px)"
-                  srcset="img/slider/flat_white_tablet.png 1x, img/slider/flat_white_tablet@2x.png 2x">
-                <img class="promo__image" loading="lazy" src="img/slider/flat_white_mobile.png"
-                  srcset="img/slider/flat_white_mobile@2x.png 2x" alt="Декаф Флэт Уайт.">
-              </picture>
-              <div class="promo__info">
-                <p class="promo__badge">Новинка!</p>
-                <h3 class="promo__title">Декаф Флэт Уайт</h3>
-                <p class="promo__description">
-                  Свежесваренный кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным
-                  фермерским молоком&nbsp;— то, что нужно для&nbsp;расслабления после
-                  тяжёлого рабочего дня
-                </p>
-                <div class="promo__product-info">
-                  <span class="promo__old-price">295₽</span>
-                  <span class="promo__new-price">225₽</span>
-                  <button class="promo__order" type="button">Заказать</button>
-                </div>
-              </div>
-            </div>
-          </li>
-          <!-- <li class="promo__item promo__item--lavender slider__item">
-            <div class="promo__item-wrapper">
-              <picture>
-                <source type="image/webp" media="(min-width: 1440px)"
-                  srcset="img/slider/lavender_desktop.webp 1x, img/slider/lavender_desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)"
-                  srcset="img/slider/lavender_tablet.webp 1x, img/slider/lavender_tablet@2x.webp 2x">
-                <source type="image/webp"
-                  srcset="img/slider/lavender_mobile.webp 1x, img/slider/lavender_mobile@2x.webp 2x">
-                <source media="(min-width: 1440px)"
-                  srcset="img/slider/lavender_desktop.png 1x, img/slider/lavender_desktop@2x.png 2x">
-                <source media="(min-width: 768px)"
-                  srcset="img/slider/lavender_tablet.png 1x, img/slider/lavender_tablet@2x.png 2x">
-                <img class="promo__image" loading="lazy" src="img/slider/lavender_mobile.png"
-                  srcset="img/slider/lavender_mobile@2x.png 2x" alt="Декаф Флэт Уайт.">
-              </picture>
-              <div class="promo__info">
-                <p class="promo__badge">Новинка!</p>
-                <h3 class="promo__title">Лавандовый Латте</h3>
-                <p class="promo__description">
-                  Невероятное сочетание перуанской высокогорной арабики с&nbsp;молоком
-                  ламы и&nbsp;лавандовым сиропом унесёт вас прямо на&nbsp;вершину Радужных
-                  гор
-                </p>
-                <div class="promo__product-info">
-                  <span class="promo__old-price">285₽</span>
-                  <span class="promo__new-price">265₽</span>
-                  <button class="promo__order" type="button">Заказать</button>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="promo__item promo__item--espresso slider__item">
-            <div class="promo__item-wrapper">
-              <picture>
-                <source type="image/webp" media="(min-width: 1440px)"
-                  srcset="img/slider/espresso_desktop.webp 1x, img/slider/espresso_desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 768px)"
-                  srcset="img/slider/espresso_tablet.webp 1x, img/slider/espresso_tablet@2x.webp 2x">
-                <source type="image/webp"
-                  srcset="img/slider/espresso_mobile.webp 1x, img/slider/espresso_mobile@2x.webp 2x">
-                <source media="(min-width: 1440px)"
-                  srcset="img/slider/espresso_desktop.png 1x, img/slider/espresso_desktop@2x.png 2x">
-                <source media="(min-width: 768px)"
-                  srcset="img/slider/espresso_tablet.png 1x, img/slider/espresso_tablet@2x.png 2x">
-                <img class="promo__image" loading="lazy" src="img/slider/espresso_mobile.png"
-                  srcset="img/slider/espresso_mobile@2x.png 2x" alt="Декаф Флэт Уайт.">
-              </picture>
-              <div class="promo__info">
-                <p class="promo__badge">Новинка!</p>
-                <h3 class="promo__title">Тройной Эспрессо</h3>
-                <p class="promo__description">
-                  Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной
-                  эспрессо из&nbsp;Колумбии покажет вам, что такое настоящая бодрость
-                </p>
-                <div class="promo__product-info">
-                  <span class="promo__old-price">395₽</span>
-                  <span class="promo__new-price">375₽</span>
-                  <button class="promo__order" type="button">Заказать</button>
-                </div>
-              </div>
-            </div>
-          </li> -->
-        </ul>
         <p class="promo__toggles slider__toggles visually-hidden">
           <button class="slider__toggle slider__toggle--current" type="button">
             1
@@ -193,6 +97,123 @@
           <button class="slider__toggle" type="button">2</button>
           <button class="slider__toggle" type="button">3</button>
         </p>
+      </div> -->
+
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide swiper__slide">
+            <div class="promo__item-wrapper promo__item-wrapper--flat-white">
+              <div class="promo__item">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="img/slider/flat_white_desktop.webp 1x, img/slider/flat_white_desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/slider/flat_white_tablet.webp 1x, img/slider/flat_white_tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/slider/flat_white_mobile.webp 1x, img/slider/flat_white_mobile@2x.webp 2x">
+                  <source media="(min-width: 1440px)"
+                    srcset="img/slider/flat_white_desktop.png 1x, img/slider/flat_white_desktop@2x.png 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/slider/flat_white_tablet.png 1x, img/slider/flat_white_tablet@2x.png 2x">
+                  <img class="promo__image" src="img/slider/flat_white_mobile.png"
+                    srcset="img/slider/flat_white_mobile@2x.png 2x" alt="Декаф Флэт Уайт.">
+                </picture>
+                <div class="promo__info">
+                  <p class="promo__badge">Новинка!</p>
+                  <h3 class="promo__title">Декаф Флэт Уайт</h3>
+                  <p class="promo__description">
+                    Свежесваренный кофе без кофеина из&nbsp;Эфиопии с&nbsp;натуральным
+                    фермерским молоком&nbsp;— то, что нужно для&nbsp;расслабления после
+                    тяжёлого рабочего дня
+                  </p>
+                  <div class="promo__product-info">
+                    <span class="promo__old-price">295₽</span>
+                    <span class="promo__new-price">225₽</span>
+                    <button class="promo__order" type="button">Заказать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide swiper__slide">
+            <div class="promo__item-wrapper promo__item-wrapper--lavender">
+              <div class="promo__item">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="img/slider/lavender_desktop.webp 1x, img/slider/lavender_desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/slider/lavender_tablet.webp 1x, img/slider/lavender_tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/slider/lavender_mobile.webp 1x, img/slider/lavender_mobile@2x.webp 2x">
+                  <source media="(min-width: 1440px)"
+                    srcset="img/slider/lavender_desktop.png 1x, img/slider/lavender_desktop@2x.png 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/slider/lavender_tablet.png 1x, img/slider/lavender_tablet@2x.png 2x">
+                  <img class="promo__image" src="img/slider/lavender_mobile.png"
+                    srcset="img/slider/lavender_mobile@2x.png 2x" alt="Декаф Флэт Уайт.">
+                </picture>
+                <div class="promo__info">
+                  <p class="promo__badge">Новинка!</p>
+                  <h3 class="promo__title">Лавандовый Латте</h3>
+                  <p class="promo__description">
+                    Невероятное сочетание перуанской высокогорной арабики с&nbsp;молоком
+                    ламы и&nbsp;лавандовым сиропом унесёт вас прямо на&nbsp;вершину Радужных
+                    гор
+                  </p>
+                  <div class="promo__product-info">
+                    <span class="promo__old-price">285₽</span>
+                    <span class="promo__new-price">265₽</span>
+                    <button class="promo__order" type="button">Заказать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide swiper__slide">
+            <div class="promo__item-wrapper promo__item-wrapper--espresso">
+              <div class="promo__item">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="img/slider/espresso_desktop.webp 1x, img/slider/espresso_desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/slider/espresso_tablet.webp 1x, img/slider/espresso_tablet@2x.webp 2x">
+                  <source type="image/webp"
+                    srcset="img/slider/espresso_mobile.webp 1x, img/slider/espresso_mobile@2x.webp 2x">
+                  <source media="(min-width: 1440px)"
+                    srcset="img/slider/espresso_desktop.png 1x, img/slider/espresso_desktop@2x.png 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/slider/espresso_tablet.png 1x, img/slider/espresso_tablet@2x.png 2x">
+                  <img class="promo__image" src="img/slider/espresso_mobile.png"
+                    srcset="img/slider/espresso_mobile@2x.png 2x" alt="Декаф Флэт Уайт.">
+                </picture>
+                <div class="promo__info">
+                  <p class="promo__badge">Новинка!</p>
+                  <h3 class="promo__title">Тройной Эспрессо</h3>
+                  <p class="promo__description">
+                    Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной
+                    эспрессо из&nbsp;Колумбии покажет вам, что такое настоящая бодрость
+                  </p>
+                  <div class="promo__product-info">
+                    <span class="promo__old-price">395₽</span>
+                    <span class="promo__new-price">375₽</span>
+                    <button class="promo__order" type="button">Заказать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination promo__pagination"></div>
+        <button class="promo__button promo__button--prev" type="button">
+          <svg class="promo__button-image" width="11" height="20">
+            <use xlink:href="img/icons/stack.svg#left-arrow"></use>
+          </svg>
+        </button>
+        <button class="promo__button promo__button--next" type="button">
+          <svg class="promo__button-image" width="11" height="20">
+            <use xlink:href="img/icons/stack.svg#right-arrow"></use>
+          </svg>
+        </button>
       </div>
     </section>
 
@@ -286,9 +307,8 @@
               <ul class="filter__milk-list">
                 <li class="filter__milk-item">
                   <label class="filter__milk-radio">
-                    <input class="filter__milk-input" type="radio" name="milk" value="no-matter"
-                      checked="checked">
-                      Неважно
+                    <input class="filter__milk-input" type="radio" name="milk" value="no-matter" checked="checked">
+                    Неважно
                   </label>
                 </li>
                 <li class="filter__milk-item">
@@ -523,14 +543,11 @@
           srcset="img/map/map-desktop.webp 1x, img/map/map-desktop@2x.webp 2x">
         <source type="image/webp" media="(min-width: 768px)"
           srcset="img/map/map-tablet.webp 1x, img/map/map-tablet@2x.webp 2x">
-        <source type="image/webp"
-          srcset="img/map/map-mobile.webp 1x, img/map/map-mobile@2x.webp 2x">
-        <source media="(min-width: 1440px)"
-          srcset="img/map/map-desktop.jpg 1x, img/map/map-desktop@2x.jpg 2x">
-        <source media="(min-width: 768px)"
-          srcset="img/map/map-tablet.jpg 1x, img/map/map-tablet@2x.jpg 2x">
-        <img class="map__image" loading="lazy" src="img/map/map-mobile.jpg"
-          srcset="img/map/map-mobile@2x.jpg 2x" alt="Декаф Флэт Уайт.">
+        <source type="image/webp" srcset="img/map/map-mobile.webp 1x, img/map/map-mobile@2x.webp 2x">
+        <source media="(min-width: 1440px)" srcset="img/map/map-desktop.jpg 1x, img/map/map-desktop@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="img/map/map-tablet.jpg 1x, img/map/map-tablet@2x.jpg 2x">
+        <img class="map__image" loading="lazy" src="img/map/map-mobile.jpg" srcset="img/map/map-mobile@2x.jpg 2x"
+          alt="Декаф Флэт Уайт.">
       </picture>
     </section>
   </main>
@@ -629,6 +646,7 @@
       </a>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
   <script src="./js/script.js" type="module"></script>
 </body>

@@ -1,9 +1,5 @@
-.promo__list {
-  @include reset-list;
-}
-
-.promo__item {
-  padding: 20px 20px 60px;
+.promo__item-wrapper {
+  width: 100%;
 
   &--flat-white {
     background-color: $flat-white;
@@ -18,9 +14,12 @@
   }
 }
 
-.promo__item-wrapper {
-  max-width: $mobile-wrapper;
+.promo__item {
   margin: 0 auto;
+  max-width: $mobile-wrapper;
+  box-sizing: border-box;
+  min-height: 656px;
+  padding: 20px 0 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,37 +111,60 @@
 }
 
 .promo__button {
-  position: absolute;
+  height: 100%;
   width: 20px;
-  height: 20px;
-  padding: 0;
-  border: none;
+  position: absolute;
+  top: 0;
+  fill: #7859cf;
+  border: 0;
   background-color: transparent;
+  z-index: 10;
   cursor: pointer;
 
+  &:disabled {
+    fill: $base-grey;
+    cursor: default;
+  }
+
   &--prev {
-    top: 50%;
+    left: 0;
+
+    &:enabled:hover,
+    &:enabled:focus-visible {
+      background: linear-gradient(90deg, $base-white 0%, rgba(255, 255, 255, 0) 100%);
+      outline: 0;
+    }
+
+    &:enabled:active {
+      background: linear-gradient(90deg, $primary-opacity 0%, rgba(120, 89, 207, 0) 100%);
+    }
   }
 
   &--next {
-    top: 50%;
     right: 0;
+
+    &:enabled:hover,
+    &:enabled:focus-visible {
+      background: linear-gradient(-90deg, $base-white 0%, rgba(255, 255, 255, 0) 100%);
+      outline: 0;
+    }
+
+    &:enabled:active {
+      background: linear-gradient(-90deg, $primary-opacity 0%, rgba(120, 89, 207, 0) 100%);
+    }
   }
 }
 
 @media (min-width: $tablet-width) {
   .promo__item {
-    padding: 50px 80px 308px;
+    max-width: 608px;
+    min-height: 640px;
+    padding: 60px 0 308px;
     margin-bottom: 188px;
     position: relative;
   }
 
-  .promo__item-wrapper {
-    max-width: $tablet-wrapper;
-  }
-
   .promo__item picture {
-    order: 2;
     position: absolute;
     bottom: -188px;
   }
@@ -157,6 +179,11 @@
     font-size: 20px;
     line-height: 32px;
   }
+
+  .promo__button {
+    width: 80px;
+    height: calc(100% - 188px);
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -166,12 +193,9 @@
   }
 
   .promo__item {
-    padding: 30px 80px 84px 105px;
+    max-width: 1255px;
+    padding: 30px 0 84px;
     margin-bottom: 0;
-  }
-
-  .promo__item-wrapper {
-    max-width: $desktop-wrapper;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -183,5 +207,13 @@
 
   .promo__description {
     text-align: left;
+  }
+
+  .promo__button {
+    height: 100%;
+  }
+
+  .promo__pagination {
+    padding-bottom: 60px;
   }
 }
